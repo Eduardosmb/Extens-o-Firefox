@@ -1,4 +1,4 @@
-#Safe Zone
+# Safe Zone
 
 **Safe Zone** é uma extensão para o navegador Firefox que ajuda os usuários a avaliar a privacidade das páginas que visitam. Ao analisar diversos aspectos de uma página web, a extensão fornece uma pontuação de privacidade que indica o quão bem a página respeita a privacidade do usuário. Além disso, a extensão detalha informações específicas sobre ameaças potenciais, armazenamento de dados e uso de cookies.
 
