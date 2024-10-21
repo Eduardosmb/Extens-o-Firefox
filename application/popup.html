@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Analyzer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      width: 350px;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #4a90e2;
+    }
+    .section {
+      margin-bottom: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .section-header {
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4a90e2;
+      color: #fff;
+    }
+    .section-header img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+    .section-content {
+      padding: 15px;
+      display: none;
+      background-color: #fff;
+      transition: max-height 0.2s ease-out;
+    }
+    .active .section-content {
+      display: block;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 25px;
+    }
+    p {
+      margin: 5px 0;
+    }
+    #score {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .progress-circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #4caf50 0%,
+        #4caf50 80%,
+        #ff9800 80%,
+        #ff9800 50%,
+        #f44336 50%,
+        #f44336 0%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      transition: background 0.5s ease;
+    }
+    .progress-circle::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #f4f4f9;
+    }
+    .progress-circle span {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+    .score-good {
+      color: #4caf50;
+    }
+    .score-warning {
+      color: #ff9800;
+    }
+    .score-bad {
+      color: #f44336;
+    }
+    .section-header::after {
+      content: '\25BC';
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+    .active .section-header::after {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <h1>Privacy Analyzer</h1>
+  
+  <div id="score">
+    <div class="progress-circle">
+      <span id="score-value">0</span>
+    </div>
+    <h2 id="score-label">Carregando...</h2>
+  </div>
+  
+  <div class="section" id="content-section">
+    <div class="section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="icons/domain.png" alt="Domínios">
+        Domínios de Terceira Parte
+      </div>
+    </div>
+    <div class="section-content" id="content">
+      <p>Carregando...</p>
+    </div>
+  </div>
+  
+  <div class="section" id="threats-section">
+    <div class="section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="icons/threat-detection.png" alt="Ameaças">
+        Ameaças Detectadas
+      </div>
+    </div>
+    <div class="section-content" id="threats">
+      <p>Carregando...</p>
+    </div>
+  </div>
+  
+  <div class="section" id="storage-section">
+    <div class="section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="icons/database.png" alt="Armazenamento">
+        Uso de Armazenamento
+      </div>
+    </div>
+    <div class="section-content" id="storage">
+      <p>Carregando...</p>
+    </div>
+  </div>
+  
+  <div class="section" id="canvas-section">
+    <div class="section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="icons/artboard.png" alt="Canvas">
+        Canvas Fingerprinting
+      </div>
+    </div>
+    <div class="section-content" id="canvas">
+      <p>Carregando...</p>
+    </div>
+  </div>
+  
+  <div class="section" id="cookies-section">
+    <div class="section-header">
+      <div style="display: flex; align-items: center;">
+        <img src="icons/cookie.png" alt="Cookies">
+        Cookies Detectados
+      </div>
+    </div>
+    <div class="section-content" id="cookies">
+      <p>Carregando...</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
