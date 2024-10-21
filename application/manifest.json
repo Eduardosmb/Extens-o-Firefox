@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Privacy Analyzer",
+  "name": "Safe Zone",
   "version": "1.0",
   "description": "Detecta ameaças à privacidade durante a navegação.",
   "permissions": [
@@ -15,7 +15,7 @@
     "scripts": ["background.js"]
   },
   "browser_action": {
-    "default_title": "Privacy Analyzer",
+    "default_title": "Safe Zone",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
