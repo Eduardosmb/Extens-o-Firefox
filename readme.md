@@ -42,4 +42,4 @@ A pontuação de privacidade é calculada com base nos seguintes critérios:
   - Cada cookie de terceira parte reduz 1 ponto adicional.
 - **Canvas Fingerprinting:** A detecção de Canvas Fingerprinting reduz 20 pontos.
 
-A pontuação inicial é de 100 pontos, e as deduções são aplicadas conforme os critérios acima. A pontuação final é arredondada para o número inteiro mais próximo e limitada a um mínimo de 0 pontos.
+A pontuação inicial é de 100 pontos, e as reduções são aplicadas conforme os critérios acima. A pontuação final é arredondada para o número inteiro mais próximo e limitada a um mínimo de 0 pontos.
